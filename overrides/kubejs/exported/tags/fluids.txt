@@ -1,0 +1,141 @@
+To refresh this file, delete it and run /reload command again! Last updated: Jan 12, 2023, 12:05:35 AM
+
+#forge:crude_oil
+
+#minecraft:water
+- minecraft:water
+- minecraft:flowing_water
+- urushi:hot_spring_water
+- urushi:flowing_hot_spring_water
+- create_confectionery:black_chocolate
+- create_confectionery:flowing_black_chocolate
+- create_confectionery:white_chocolate
+- create_confectionery:flowing_white_chocolate
+- create_confectionery:hot_chocolate
+- create_confectionery:flowing_hot_chocolate
+- create_confectionery:caramel
+- create_confectionery:flowing_caramel
+- create_confectionery:ruby_chocolate
+- create_confectionery:flowing_ruby_chocolate
+- tofucraft:soymilk
+- tofucraft:soymilk_flow
+- tofucraft:soymilk_hell
+- tofucraft:soymilk_hell_flow
+- tofucraft:soymilk_soul
+- tofucraft:soymilk_soul_flow
+- tofucraft:bittern
+- tofucraft:bittern_flow
+- sakura:food_oil
+- sakura:food_oil_flowing
+- sakura:soysauce
+- sakura:soysauce_flowing
+- sakura:doburoku
+- sakura:doburoku_flowing
+- sakura:sake
+- sakura:sake_flowing
+- sakura:shouchu
+- sakura:shouchu_flowing
+- create:flowing_honey
+- create:honey
+- create:flowing_chocolate
+- create:chocolate
+- createaddition:flowing_seed_oil
+- createaddition:seed_oil
+
+#forge:milk
+- minecraft:milk?
+- minecraft:flowing_milk?
+
+#forge:water/water
+- minecraft:water
+- minecraft:flowing_water
+- tfc:river_water?
+
+#tconstruct:tooltips/metal
+- #forge:molten_fiery
+- #forge:molten_knightmetal
+
+#twilightforest:molten_knightmetal
+- twilightforest:molten_knightmetal?
+- twilightforest:flowing_molten_knightmetal?
+
+#forge:molten_fiery
+- #twilightforest:molten_fiery?
+
+#forge:biofuel
+- createaddition:flowing_bioethanol
+- createaddition:bioethanol
+
+#twilightforest:fire_jet_fuel
+- #minecraft:lava
+
+#forge:plantoil
+- sakura:food_oil
+- sakura:food_oil_flowing
+- tfc:flowing_olive_oil?
+- tfc:olive_oil?
+- createaddition:flowing_seed_oil
+- createaddition:seed_oil
+
+#minecraft:lava
+- minecraft:lava
+- minecraft:flowing_lava
+
+#biomesoplenty:blood
+- biomesoplenty:blood
+- biomesoplenty:flowing_blood
+
+#forge:ethanol
+- createaddition:flowing_bioethanol
+- createaddition:bioethanol
+
+#create:bottomless/deny
+
+#forge:chocolate
+- create:flowing_chocolate
+- create:chocolate
+
+#create:bottomless/allow
+- minecraft:water
+- minecraft:lava
+
+#forge:experience
+- sophisticatedcore:xp_still
+
+#forge:tea
+- create:flowing_tea
+- create:tea
+
+#twilightforest:molten_fiery
+- twilightforest:molten_fiery?
+- twilightforest:flowing_molten_fiery?
+
+#forge:food_oil
+- #forge:plantoil
+
+#forge:molten_knightmetal
+- #twilightforest:molten_knightmetal?
+
+#ae2:blacklisted/annihilation_plane
+
+#sakura:brewers_alcohol
+- sakura:shouchu
+- sakura:shouchu_flowing
+
+#twilightforest:fiery_essence
+- twilightforest:fiery_essence?
+- twilightforest:flowing_fiery_essence?
+
+#tconstruct:spilling/metal/cheap
+- #forge:molten_fiery
+- #twilightforest:molten_knightmetal
+
+#decorative_blocks:thatch
+- decorative_blocks:thatch
+- decorative_blocks:flowing_thatch
+
+#forge:honey
+- create:flowing_honey
+- create:honey
+
+#forge:creosote

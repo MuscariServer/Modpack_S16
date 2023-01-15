@@ -1,0 +1,252 @@
+{
+	id: "4AEAD9258C142152"
+	group: ""
+	order_index: 0
+	filename: "mods"
+	title: "Mods"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Absent by Design"
+			icon: "absentbydesign:fence_quartz"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"{image:modpack:textures/wall2.png width:100 height:56 align:1}"
+				"バニラブロックのフェンスや壁、ハーフブロック、階段などを追加するMOD。"
+			]
+			id: "423E1E8C83E29284"
+		}
+		{
+			title: "Additional Lanterns"
+			icon: "additionallanterns:magenta_normal_lantern"
+			x: 1.0d
+			y: 0.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"様々な素材や色のランタンを追加するMOD。"
+			]
+			id: "5085EF859E055EA8"
+		}
+		{
+			title: "Apotheosis"
+			icon: "minecraft:enchanting_table"
+			x: 0.0d
+			y: 1.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"エンチャント強化+αの機能を備えたMOD。"
+			]
+			id: "2DD5F2E199E8BE94"
+		}
+		{
+			title: "Applied Energistics 2"
+			icon: "ae2:controller"
+			x: 1.0d
+			y: 1.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"倉庫機能や自動クラフト機能を持った機械を追加するMOD。"
+			]
+			id: "14BD69516F6FC739"
+		}
+		{
+			title: "Aquaculture 2"
+			icon: "aquaculture:atlantic_cod"
+			x: 2.0d
+			y: 1.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"釣りシステムを拡張し、新しい魚を捕まえられるMOD。"
+			]
+			id: "5078CAF2C9031FA3"
+		}
+		{
+			title: "Blue Skies"
+			icon: "blue_skies:blinding_key"
+			x: 0.0d
+			y: 2.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"新たな世界を探索し、ダンジョンを攻略するMOD。"
+			]
+			id: "2AC729FF882C248F"
+		}
+		{
+			title: "Chimes"
+			icon: "chimes:bamboo_chimes"
+			x: 1.0d
+			y: 2.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				""
+				"竹、アメジストなどのウィンドチャイムを追加するMOD。"
+			]
+			id: "6E14A40284306E43"
+		}
+		{
+			title: "Chipped"
+			icon: "chipped:light_gray_glazed_terracotta_1"
+			x: 2.0d
+			y: 2.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"様々な見た目のブロックを追加するMOD。"
+			]
+			id: "6035AC3BEACC03B3"
+		}
+		{
+			title: "Construction Wand"
+			icon: {
+				id: "constructionwand:diamond_wand"
+				Count: 1b
+				tag: {
+					Damage: 0
+					wand_options: { }
+				}
+			}
+			x: 0.0d
+			y: 3.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"一括設置ができる便利な杖を追加するMOD。"
+			]
+			id: "6BBFC58B036B9705"
+		}
+		{
+			title: "Create"
+			icon: "create:wrench"
+			x: 1.0d
+			y: 3.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"歯車を使って自動化するロマン満載のMOD。"
+			]
+			id: "33A5A43C6BCE3120"
+		}
+		{
+			title: "Decorative Blocks"
+			icon: "decorative_blocks:brazier"
+			x: 2.0d
+			y: 3.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"いくつかの新しい装飾ブロックを追加するMOD。"
+			]
+			id: "3BB497C40F246D3E"
+		}
+		{
+			title: "Farmer's Delight"
+			icon: "farmersdelight:stove"
+			x: 0.0d
+			y: 4.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"バニラの作物を使ったさまざまな料理を追加するMOD。"
+			]
+			id: "1E79AE933FF9FCB5"
+		}
+		{
+			title: "Grimoire of Gaia"
+			icon: "grimoireofgaia:doll_dryad"
+			x: 1.0d
+			y: 4.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"女の子のモンスターを追加するMOD。"
+			]
+			id: "0992922BAA66CEA5"
+		}
+		{
+			title: "Iron Chests: Restocked"
+			icon: "ironchests:copper_chest"
+			x: 2.0d
+			y: 4.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"金属で作る大容量チェストを追加するMOD。"
+			]
+			id: "548D929B6D23483D"
+		}
+		{
+			title: "LitteleMaidRebirth"
+			icon: "grimoireofgaia:doll_maid"
+			x: 3.0d
+			y: 4.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"プレイヤーが使役できるメイドを追加するMOD。"
+			]
+			id: "5E3FA8564076D51C"
+		}
+		{
+			title: "Macaw's Mods"
+			icon: "mcwlights:white_lamp"
+			x: 3.0d
+			y: 3.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"様々な種類の橋やドア、フェンス、窓などを追加するMOD。"
+			]
+			id: "362A601DDC262649"
+		}
+		{
+			title: "More Minecarts"
+			icon: "moreminecarts:piston_pushcart"
+			x: 3.0d
+			y: 2.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"様々な種類のトロッコやレールを追加するMOD。"
+			]
+			id: "76548E81625DE390"
+		}
+		{
+			title: "Nature's Compass"
+			icon: {
+				id: "naturescompass:naturescompass"
+				Count: 1b
+				tag: {
+					FoundZ: -1070
+					FoundX: -804
+					BiomeKey: "minecraft:desert"
+					SearchRadius: 1500
+					DisplayCoordinates: 1b
+					State: 2
+					Samples: 723
+				}
+			}
+			x: 3.0d
+			y: 0.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"行きたいバイオームの場所を教えてくれるコンパスを追加するMOD。"
+			]
+			id: "4D1CFC48926CD9B9"
+		}
+		{
+			title: "Oh the Biomes You'll Go"
+			icon: "byg:ametrine_gems"
+			x: 4.0d
+			y: 4.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"オーバーワールドに様々なバイオームを追加するMOD。"
+			]
+			id: "2ADA612C2EA9B478"
+		}
+		{
+			title: "Sakura"
+			icon: "sakura:sakura_sapling"
+			x: 4.0d
+			y: 3.0d
+			description: [
+				"{image:#FFFFFF width:100 height:56 align:1}"
+				"桜の木や和食を追加するMOD。"
+			]
+			id: "01921E22851BF0DC"
+		}
+	]
+	quest_links: [ ]
+}
