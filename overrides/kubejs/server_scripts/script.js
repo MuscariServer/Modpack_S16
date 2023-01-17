@@ -12,7 +12,7 @@ onEvent('recipes', e => {
 		"type": "create:deploying",
         "ingredients": [
             {
-                "item": "create:iron_sheet"
+                "item": "minecraft:iron_block"
             },
             {
                 "item": held
@@ -20,7 +20,7 @@ onEvent('recipes', e => {
         ],
         "results": [
             {
-                "item": Item.of(output).toResultJson()
+                "item": output
             }
         ],
         "keepHeldItem": true
