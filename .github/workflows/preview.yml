@@ -20,14 +20,12 @@ jobs:
       - name: Set the version
         run: |
           MODPACKVERSION=${{ steps.get_version.outputs.VERSION }}
-          echo "MCS ${MODPACKVERSION}-pr-${{ steps.get_version.outputs.PR_VERSION }}" > ./overrides/resources/custommainmenu/version.txt
           sed -i -e "s/MODPACKVERSION/${MODPACKVERSION}/g" ./manifest.json
           sed -i -e "s/MODPACKVERSION/${MODPACKVERSION}/g" ./instance.cfg
-          sed -i -e "s/MODPACKVERSION/${MODPACKVERSION}/g" ./overrides/config/craftpresence.properties
 
       - name: Archive Release CF
         run: |
-          zip -r ./MCS-${{ steps.get_version.outputs.VERSION }}-pr-${{ steps.get_version.outputs.PR_VERSION }}-cf.zip ./manifest.json ./modlist.html ./overrides/bansoukou/ ./overrides/config/ ./overrides/local/ ./overrides/resources/ ./overrides/scripts/
+          zip -r ./MCS-${{ steps.get_version.outputs.VERSION }}-pr-${{ steps.get_version.outputs.PR_VERSION }}-cf.zip ./manifest.json ./modlist.html ./overrides/config/ ./overrides/kubejs/
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -55,7 +53,7 @@ jobs:
       - name: Archive Release Server
         run: |
           mv -vf .minecraft/* ./
-          zip -r ./MCS-${{ steps.get_version.outputs.VERSION }}-pr-${{ steps.get_version.outputs.PR_VERSION }}-server.zip ./bansoukou/ ./config/ ./local/ ./mods/ ./resources/ ./scripts/
+          zip -r ./MCS-${{ steps.get_version.outputs.VERSION }}-pr-${{ steps.get_version.outputs.PR_VERSION }}-server.zip ./config/ ./kubejs/ ./mods/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
