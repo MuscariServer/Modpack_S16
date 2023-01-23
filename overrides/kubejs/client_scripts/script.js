@@ -8,4 +8,5 @@ onEvent('jei.hide.items', event => {
 	}
 	jeihide('moreminecarts:chunk_loader');
 	jeihide('moreminecarts:minecart_with_chunk_loader');
+	jeihide('ae2:facade');
 })
