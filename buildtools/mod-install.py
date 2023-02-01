@@ -29,9 +29,9 @@ for key in manifest_json["files"]:
 
     if mod_json.status_code == 200:
         mod_json = mod_json.json()
-        pprint.pprint(mod_json["data"])
-
-        if mod_json["data"]["downloadUrl"] != "None":
+        if 'None' in mod_json["data"]["downloadUrl"].values():
+            pprint.pprint(mod_json["data"])
+        else:
             mod_file = requests.get(mod_json["data"]["downloadUrl"], allow_redirects=True, stream=True, headers=headers)
             with open(mod_json["data"]["fileName"], "wb") as f:
                 shutil.copyfileobj(mod_file.raw, f)
@@ -51,5 +51,3 @@ for key in manifest_json["files"]:
                         os.rename(mod_json["data"]["fileName"], "./overrides/resourcepacks/{}".format(mod_json["data"]["fileName"].replace(".zip", ".zip.disabled")))
 
                 print("Downloaded {}".format(mod_json["data"]["fileName"]))
-        else:
-            print("Error mod {}".format(mod_json["data"]["fileName"]))
