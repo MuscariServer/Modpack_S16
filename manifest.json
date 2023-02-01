@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "s16",
-  "version": "1.3",
+  "version": "0.1.4",
   "author": "",
   "files": [
     {
@@ -112,6 +112,11 @@
     {
       "projectID": 366140,
       "fileID": 3814624,
+      "required": true
+    },
+    {
+      "projectID": 582327,
+      "fileID": 3797990,
       "required": true
     },
     {
@@ -320,13 +325,13 @@
       "required": true
     },
     {
-      "projectID": 378646,
-      "fileID": 3930974,
+      "projectID": 574622,
+      "fileID": 4000179,
       "required": true
     },
     {
-      "projectID": 448233,
-      "fileID": 3743929,
+      "projectID": 378646,
+      "fileID": 3930974,
       "required": true
     },
     {
@@ -617,6 +622,11 @@
     {
       "projectID": 313970,
       "fileID": 4132196,
+      "required": true
+    },
+    {
+      "projectID": 480816,
+      "fileID": 3781652,
       "required": true
     },
     {
