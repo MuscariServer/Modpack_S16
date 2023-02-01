@@ -29,23 +29,27 @@ for key in manifest_json["files"]:
 
     if mod_json.status_code == 200:
         mod_json = mod_json.json()
-        pprint.pprint(mod_json)
-        mod_file = requests.get(mod_json["data"]["downloadUrl"], allow_redirects=True, stream=True, headers=headers)
-        with open(mod_json["data"]["fileName"], "wb") as f:
-            shutil.copyfileobj(mod_file.raw, f)
+        pprint.pprint(mod_json["data"])
 
-            # ./overrides/mods/
-            if mod_json["data"]["fileName"].endswith(".jar"):
-                if key["required"]:
-                    shutil.move(mod_json["data"]["fileName"], "./overrides/mods/")
-                else:
-                    os.rename(mod_json["data"]["fileName"], "./overrides/mods/{}".format(mod_json["data"]["fileName"].replace(".jar", ".jar.disabled")))
+        if mod_json["data"]["downloadUrl"] != "None":
+            mod_file = requests.get(mod_json["data"]["downloadUrl"], allow_redirects=True, stream=True, headers=headers)
+            with open(mod_json["data"]["fileName"], "wb") as f:
+                shutil.copyfileobj(mod_file.raw, f)
 
-            # ./overrides/resourcepacks/
-            elif mod_json["data"]["fileName"].endswith(".zip"):
-                if key["required"]:
-                    shutil.move(mod_json["data"]["fileName"], "./overrides/resourcepacks/")
-                else:
-                    os.rename(mod_json["data"]["fileName"], "./overrides/resourcepacks/{}".format(mod_json["data"]["fileName"].replace(".zip", ".zip.disabled")))
+                # ./overrides/mods/
+                if mod_json["data"]["fileName"].endswith(".jar"):
+                    if key["required"]:
+                        shutil.move(mod_json["data"]["fileName"], "./overrides/mods/")
+                    else:
+                        os.rename(mod_json["data"]["fileName"], "./overrides/mods/{}".format(mod_json["data"]["fileName"].replace(".jar", ".jar.disabled")))
 
-            print("Downloaded {}".format(mod_json["data"]["fileName"]))
+                # ./overrides/resourcepacks/
+                elif mod_json["data"]["fileName"].endswith(".zip"):
+                    if key["required"]:
+                        shutil.move(mod_json["data"]["fileName"], "./overrides/resourcepacks/")
+                    else:
+                        os.rename(mod_json["data"]["fileName"], "./overrides/resourcepacks/{}".format(mod_json["data"]["fileName"].replace(".zip", ".zip.disabled")))
+
+                print("Downloaded {}".format(mod_json["data"]["fileName"]))
+        else:
+            print("Error mod {}".format(mod_json["data"]["fileName"]))
