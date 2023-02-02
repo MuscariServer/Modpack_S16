@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "s16",
-  "version": "0.1.4",
+  "version": "1.4",
   "author": "",
   "files": [
     {
@@ -290,6 +290,46 @@
       "required": true
     },
     {
+      "projectID": 454372,
+      "fileID": 4364898,
+      "required": true
+    },
+    {
+      "projectID": 670986,
+      "fileID": 3981975,
+      "required": true
+    },
+    {
+      "projectID": 470193,
+      "fileID": 3833738,
+      "required": true
+    },
+    {
+      "projectID": 597869,
+      "fileID": 4271369,
+      "required": true
+    },
+    {
+      "projectID": 228525,
+      "fileID": 4351251,
+      "required": true
+    },
+    {
+      "projectID": 591388,
+      "fileID": 3816373,
+      "required": true
+    },
+    {
+      "projectID": 631401,
+      "fileID": 3855148,
+      "required": true
+    },
+    {
+      "projectID": 574622,
+      "fileID": 4000179,
+      "required": true
+    },
+    {
       "projectID": 551453,
       "fileID": 3859156,
       "required": true
@@ -455,6 +495,11 @@
       "required": true
     },
     {
+      "projectID": 348521,
+      "fileID": 3972426,
+      "required": true
+    },
+    {
       "projectID": 688231,
       "fileID": 4356736,
       "required": true
@@ -575,13 +620,13 @@
       "required": true
     },
     {
-      "projectID": 480816,
-      "fileID": 3781652,
+      "projectID": 254268,
+      "fileID": 3724596,
       "required": true
     },
     {
-      "projectID": 254268,
-      "fileID": 3724596,
+      "projectID": 480816,
+      "fileID": 3781652,
       "required": true
     },
     {
@@ -832,6 +877,11 @@
     {
       "projectID": 416294,
       "fileID": 4069880,
+      "required": true
+    },
+    {
+      "projectID": 448233,
+      "fileID": 3743929,
       "required": true
     },
     {
