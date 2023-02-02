@@ -16,18 +16,18 @@ jobs:
       - name: Get the version
         id: get_version
         run: |
-          echo name=VERSION::$(echo ${GITHUB_REF} | sed -e 's#refs/tags/##g' | awk -F'-' '{print $1}') >> $GITHUB_ENV
-          echo name=PR_VERSION::$(echo ${GITHUB_REF} | sed -e 's#refs/tags/##g' | awk -F'-' '{print $3}') >> $GITHUB_ENV
+          echo ::set-output name=VERSION::$(echo ${GITHUB_REF} | sed -e 's#refs/tags/##g' | awk -F'-' '{print $1}')
+          echo ::set-output name=PR_VERSION::$(echo ${GITHUB_REF} | sed -e 's#refs/tags/##g' | awk -F'-' '{print $3}')
 
       - name: Set the version
         run: |
-          MODPACKVERSION=${{ env.VERSION }}
+          MODPACKVERSION=${{ steps.get_version.outputs.VERSION }}
           sed -i -e "s/MODPACKVERSION/${MODPACKVERSION}/g" ./manifest.json
           sed -i -e "s/MODPACKVERSION/${MODPACKVERSION}/g" ./instance.cfg
 
       - name: Archive Release CF
         run: |
-          zip -r ./MCS-${{ env.VERSION }}-pr-${{ env.PR_VERSION }}-cf.zip ./manifest.json ./modlist.html ./overrides/config/ ./overrides/kubejs/
+          zip -r ./MCS-${{ steps.get_version.outputs.VERSION }}-pr-${{ steps.get_version.outputs.PR_VERSION }}-cf.zip ./manifest.json ./modlist.html ./overrides/config/ ./overrides/kubejs/
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -49,13 +49,13 @@ jobs:
         run: |
           mv -vf ./overrides/ .minecraft/
           cp -vf ./icon.png .minecraft/
-          zip -r ./MCS-${{ env.VERSION }}-pr-${{ env.PR_VERSION }}-mmc.zip ./mmc-pack.json ./instance.cfg .minecraft/
+          zip -r ./MCS-${{ steps.get_version.outputs.VERSION }}-pr-${{ steps.get_version.outputs.PR_VERSION }}-mmc.zip ./mmc-pack.json ./instance.cfg .minecraft/
           rm -rf .minecraft/icon.png
 
       - name: Archive Release Server
         run: |
           mv -vf .minecraft/* ./
-          zip -r ./MCS-${{ env.VERSION }}-pr-${{ env.PR_VERSION }}-server.zip ./config/ ./kubejs/ ./mods/
+          zip -r ./MCS-${{ steps.get_version.outputs.VERSION }}-pr-${{ steps.get_version.outputs.PR_VERSION }}-server.zip ./config/ ./kubejs/ ./mods/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
@@ -64,6 +64,6 @@ jobs:
           prerelease: true
           generate_release_notes: true
           files: |
-            ./MCS-${{ env.VERSION }}-pr-${{ env.PR_VERSION }}-cf.zip
-            ./MCS-${{ env.VERSION }}-pr-${{ env.PR_VERSION }}-mmc.zip
-            ./MCS-${{ env.VERSION }}-pr-${{ env.PR_VERSION }}-server.zip
+            ./MCS-${{ steps.get_version.outputs.VERSION }}-pr-${{ steps.get_version.outputs.PR_VERSION }}-cf.zip
+            ./MCS-${{ steps.get_version.outputs.VERSION }}-pr-${{ steps.get_version.outputs.PR_VERSION }}-mmc.zip
+            ./MCS-${{ steps.get_version.outputs.VERSION }}-pr-${{ steps.get_version.outputs.PR_VERSION }}-server.zip
